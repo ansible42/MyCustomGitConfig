@@ -1,0 +1,7 @@
+[branch "master"]
+	mergeoptions = --no-ff
+[merge]
+	tool = vscode
+[alias]
+	clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
+	webui = "! git config --get remote.origin.url | xargs -i explorer.exe "{}""
